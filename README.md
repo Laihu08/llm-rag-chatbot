@@ -13,20 +13,21 @@ It supports **two AI model options**:
 - 🔹 Works on **macOS (M1/M2), Linux**
 
 ---
+
 ## 🔄 Complete Chatbot Workflow (RAG + LLM)
 
 ```mermaid
 graph TD;
-    A[User Inputs Query] --> B[Convert Query to Embedding (Sentence Transformers)];
-    B --> C[Search Vector Database (Retrieve Docs from ChromaDB)];
+    A[User Inputs Query] --> B[Convert Query to Embedding];
+    B --> C[Search Vector Database for Relevant Docs];
     
-    C --> D[Prepare Context (Combine Retrieved Docs + Query)];
+    C --> D[Prepare Context: Combine Retrieved Docs + Query];
     D --> E{Choose AI Model};
 
     E -- OpenAI GPT --> F[Send Context to OpenAI API];
     E -- Ollama Mistral --> G[Process Locally with Ollama];
 
-    F --> H[Generate AI Response (LLM Processes Input)];
+    F --> H[Generate AI Response];
     G --> H;
     
     H --> I[Return Processed Response];
@@ -42,6 +43,7 @@ graph TD;
     style H fill:#85E3FF,stroke:#000,stroke-width:1px;
     style I fill:#85E3FF,stroke:#000,stroke-width:1px;
     style J fill:#85E3FF,stroke:#000,stroke-width:1px;
+
 
 
 ---
