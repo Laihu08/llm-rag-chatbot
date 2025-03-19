@@ -33,6 +33,8 @@ graph TD;
     H --> I[Return Processed Response];
     I --> J[Display Response in Streamlit UI];
 
+   
+
     style A fill:#FFDDC1,stroke:#000,stroke-width:1px;
     style B fill:#FFABAB,stroke:#000,stroke-width:1px;
     style C fill:#FFC3A0,stroke:#000,stroke-width:1px;
@@ -44,11 +46,10 @@ graph TD;
     style I fill:#85E3FF,stroke:#000,stroke-width:1px;
     style J fill:#85E3FF,stroke:#000,stroke-width:1px;
 
-
-
+```
 ---
 
-## 🛠 Installation
+### 🛠 Installation
 ### **1️⃣ Clone the repo**
 ```bash
 git clone https://github.com/Laihu08/llm-rag-chatbot.git
