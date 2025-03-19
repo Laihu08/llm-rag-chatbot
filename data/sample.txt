@@ -1,0 +1,4 @@
+Artificial Intelligence (AI) is the simulation of human intelligence in machines.
+AI applications include natural language processing, robotics, and expert systems.
+Machine learning is a subset of AI that allows systems to learn from data.
+
