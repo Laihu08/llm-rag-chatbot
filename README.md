@@ -9,6 +9,7 @@ It supports **two AI model options**:
 - 🔹 **Flexible**: Choose **OpenAI GPT** (API) or **Ollama** (Local)
 - 🔹 Uses **ChromaDB** for Retrieval-Augmented Generation (RAG)
 - 🔹 No OpenAI API required when using **Ollama**
+- 🔹 **Streamlit Web UI** for easy interaction
 - 🔹 Works on **macOS (M1/M2), Linux**
 
 ---
@@ -34,10 +35,6 @@ pip install -r requirements.txt
    ```bash
    export OPENAI_API_KEY="your-api-key"
    ```
-3. Install OpenAI SDK:
-   ```bash
-   pip install openai
-   ```
 
 #### **Option 2: Ollama (Local & Free)**
 1. Install **Ollama**:
@@ -56,22 +53,29 @@ pip install -r requirements.txt
 ---
 
 ## 💬 Usage
-### **Run the chatbot (Choose One)**
+### **Run the chatbot (Streamlit Web UI)**
 
-#### **Option 1: OpenAI GPT**
-```bash
-python generate_answer_openai.py
-```
+1. Activate your virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
 
-#### **Option 2: Ollama (Mistral 7B)**
-```bash
-python generate_answer_local.py
-```
+2. Launch Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+
+3. Open your web browser and navigate to:
+   ```
+   http://localhost:8501
+   ```
+
+- ✅ **Choose your model** (OpenAI GPT or Ollama).
+- ✅ **Interact easily** via the web interface.
 
 ---
 
 ## 🎯 Future Improvements
-- ✅ Streamlit Web UI
 - ✅ Better retrieval accuracy with chunking
 - ✅ Deploy as an API for easy integration
 
