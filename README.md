@@ -17,16 +17,16 @@ It supports **two AI model options**:
 
 ```mermaid
 graph TD;
-    A[User Inputs Query] --> B[Convert Query to Embedding <br> (Using Sentence Transformers)];
-    B --> C[Search Vector Database <br> (Retrieve Relevant Docs from ChromaDB)];
+    A[User Inputs Query] --> B[Convert Query to Embedding (Sentence Transformers)];
+    B --> C[Search Vector Database (Retrieve Docs from ChromaDB)];
     
-    C --> D[Prepare Context <br> (Combine Retrieved Docs + User Query)];
+    C --> D[Prepare Context (Combine Retrieved Docs + Query)];
     D --> E{Choose AI Model};
-    
+
     E -- OpenAI GPT --> F[Send Context to OpenAI API];
     E -- Ollama Mistral --> G[Process Locally with Ollama];
 
-    F --> H[Generate AI Response <br> (LLM Analyzes and Generates Output)];
+    F --> H[Generate AI Response (LLM Processes Input)];
     G --> H;
     
     H --> I[Return Processed Response];
